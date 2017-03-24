@@ -1,0 +1,5 @@
+jruby-rack (1.1.20-1) unstable; urgency=medium
+
+  * Initial release.
+
+ -- Yury Zavarin <yzavarin@ebi.ac.uk>  Fri, 24 Mar 2017 14:25:36 +0000

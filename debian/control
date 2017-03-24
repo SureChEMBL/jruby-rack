@@ -1,0 +1,14 @@
+Source: jruby-rack
+Section: ruby
+Priority: optional
+Maintainer: Yury Zavarin <yzavarin@ebi.ac.uk>
+XS-Ruby-Versions: all
+Build-Depends:
+ debhelper (>= 9~),
+
+Package: jruby-jruby-rack
+Architecture: all
+XS-Ruby-Versions: ${ruby:Versions}
+Depends:
+ jruby,
+Description: Rack for JRuby and Java appservers

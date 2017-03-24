@@ -1,0 +1,18 @@
+#!/usr/bin/make -f
+
+TMP_LIB_DIR = lib
+
+override_dh_auto_clean:
+	rm -rf $(TMP_LIB_DIR)
+	debclean
+
+override_dh_auto_build:
+	mkdir -p $(TMP_LIB_DIR)/jruby/rack
+
+	cp jruby-rack.rb jruby-rack-1.1.20.jar $(TMP_LIB_DIR)
+	cp src/main/ruby/jruby/rack/version.rb $(TMP_LIB_DIR)/jruby/rack
+
+	dh_auto_build
+
+%:
+	dh $@ --buildsystem=ruby --with ruby
